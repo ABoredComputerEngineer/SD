@@ -4,6 +4,7 @@ image:https://travis-ci.org/arduino-libraries/SD.svg?branch=master[Build Status,
 
 The SD library allows for reading from and writing to SD cards.
 
+
 For more information about this library please visit us at
 http://www.arduino.cc/en/Reference/SD
 
