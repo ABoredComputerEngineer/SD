@@ -17,7 +17,7 @@
    along with the Arduino Sd2Card Library.  If not, see
    <http://www.gnu.org/licenses/>.
 */
-#define USE_SPI_LIB
+#define SOFTWARE_SPI 
 #include <Arduino.h>
 #include "Sd2Card.h"
 //------------------------------------------------------------------------------
@@ -177,6 +177,7 @@ static uint8_t chip_select_asserted = 0;
 void Sd2Card::chipSelectHigh(void) {
   digitalWrite(chipSelectPin_, HIGH);
   #ifdef USE_SPI_LIB
+   #error "USE_SPI_LIB is defined for some reason"
   if (chip_select_asserted) {
     chip_select_asserted = 0;
     SDCARD_SPI.endTransaction();

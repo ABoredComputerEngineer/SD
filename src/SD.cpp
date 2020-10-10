@@ -359,7 +359,6 @@ namespace SDLib {
     }
 
     return card.init(SPI_HALF_SPEED, csPin) &&
-           card.setSpiClock(clock) &&
            volume.init(card) &&
            root.openRoot(volume);
   }

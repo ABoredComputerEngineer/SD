@@ -35,7 +35,6 @@ uint8_t const SPI_QUARTER_SPEED = 2;
    USE_SPI_LIB: if set, use the SPI library bundled with Arduino IDE, otherwise
    run with a standalone driver for AVR.
 */
-#define USE_SPI_LIB
 /**
    Define MEGA_SOFT_SPI non-zero to use software SPI on Mega Arduinos.
    Pins used are SS 10, MOSI 11, MISO 12, and SCK 13.
@@ -52,6 +51,7 @@ uint8_t const SPI_QUARTER_SPEED = 2;
 //------------------------------------------------------------------------------
 // SPI pin definitions
 //
+#define SOFTWARE_SPI
 #ifndef SOFTWARE_SPI
   // hardware pin defs
 
@@ -95,13 +95,13 @@ uint8_t const SPI_QUARTER_SPEED = 2;
 #else  // SOFTWARE_SPI
   // define software SPI pins so Mega can use unmodified GPS Shield
   /** SPI chip select pin */
-  uint8_t const SD_CHIP_SELECT_PIN = 10;
+  uint8_t const SD_CHIP_SELECT_PIN = 8;
   /** SPI Master Out Slave In pin */
-  uint8_t const SPI_MOSI_PIN = 11;
+  uint8_t const SPI_MOSI_PIN = 9;
   /** SPI Master In Slave Out pin */
-  uint8_t const SPI_MISO_PIN = 12;
+  uint8_t const SPI_MISO_PIN = 10;
   /** SPI Clock pin */
-  uint8_t const SPI_SCK_PIN = 13;
+  uint8_t const SPI_SCK_PIN = 11;
 #endif  // SOFTWARE_SPI
 //------------------------------------------------------------------------------
 /** Protect block zero from write if nonzero */
