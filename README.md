@@ -1,14 +1,16 @@
-= SD Library for Arduino =
+#SD Library for Arduino
 
-image:https://travis-ci.org/arduino-libraries/SD.svg?branch=master[Build Status, link=https://travis-ci.org/arduino-libraries/SD]
+<img src="https://travis-ci.org/arduino-libraries/SD.svg?branch=master">
 
+*Modify the pin definition [here](https://github.com/ABoredComputerEngineer/SD/blob/3b2618f462d9b7f2ff8ee65be7866e67a867718a/src/utility/Sd2Card.h#L98-L104) 
+according to your needs.*
 The SD library allows for reading from and writing to SD cards.
 
 
 For more information about this library please visit us at
 http://www.arduino.cc/en/Reference/SD
 
-== License ==
+#License
 
  Copyright (C) 2009 by William Greiman
 Copyright (c) 2010 SparkFun Electronics
